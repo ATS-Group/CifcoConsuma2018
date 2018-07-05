@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Poppins:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Administración - Consuma 2018</title>
+</head>
+
+<body>
+    <!--Contenedor de pagina-->
+    <div class="main-container">
+
+        <!--Menu y navegacion movil-->
+        <header class="mobile-nav">
+            <div class="nav">
+                <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                <h3 class="head-txt"> <a href="#">Consuma 2018</a></h3>
+            </div>
+
+
+            <div class="contain-menu">
+                <ul class="navigation">
+                    <li class="iten-mobile">
+                        <a class="item-link" href="index.html">
+                            <i class="fas fa-tachometer-alt"></i>Inicio</a>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="usuarios-activos.html">
+                                <i class="fas fa-user-check"></i>Usuarios activos</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link active" href="usuarios-inactivos.html">
+                                <i class="fas fa-user-alt-slash"></i>Usuarios inactivos</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="todos-los-usuarios.html">
+                                <i class="fas fa-users"></i>Todos los usuarios</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="carnet-impresos.html">
+                                <i class="fas fa-address-card"></i>Carnet impresos</a>
+                        </li>
+                        <li class="iten-mobile">
+                            <a class="item-link" href="">
+                                <i class="fas fa-user-cog"></i>Administradores</a>
+                        </li>
+                        <h4 class="sesion">Sesión</h4>
+                        <li class="iten-mobile">
+                            <a class="item-link" href="">
+                                <i class="fas fa-sign-out-alt"></i>Cerrar sesión</a>
+                        </li>
+                </ul>
+            </div>
+            <!--Fin menu y navegacion movil-->
+        </header>
+
+        <!--Menu y navegacion de escritorio-->
+        <div class="desk-header">
+            <h3 class="head-txt">
+                <a href="">Consuma 2018</a>
+            </h3>
+            <p class="head-user">Bienvenido <span class="user-data head-user"> Usuario</span></p>
+
+            <a href="" class="logout item-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+        </div>
+
+        <div class="box">
+            <aside class="aside">
+                <div class="contain-menu-desk">
+                    <ul class="navigation-desk">
+                        <li class="item-desk">
+                            <a class="item-link" href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>Inicio</a>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="usuarios-activos.html">
+                                    <i class="fas fa-user-check"></i>Usuarios activos</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link active" href="usuarios-inactivos.html">
+                                    <i class="fas fa-user-alt-slash"></i>Usuarios inactivos</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="todos-los-usuarios.html">
+                                    <i class="fas fa-users"></i>Todos los usuarios</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="carnet-impresos.html">
+                                    <i class="fas fa-address-card"></i>Carnet impresos</a>
+                            </li>
+                            <li class="item-desk">
+                                <a class="item-link" href="">
+                                    <i class="fas fa-user-cog"></i>Administradores</a>
+                            </li>
+                    </ul>
+                </div>
+                <!--Fin menu y navegacion de escritorio-->
+            </aside>
+            <!--Contenido principal-->
+            <div class="main-content">
+                <!--Usuarios activos-->
+                <div class="content-page active-user" id="active-user">
+                    <div class="table-container">
+
+                        <table class="table table2">
+                            <thead>
+                                <tr class="tr">
+                                    <th data-column="0">Modificar</th>
+                                    <th>Inhabilitar</th>
+                                    <th>ID usuario</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
+                                    <th>País</th>
+                                    <th>Celular</th>
+                                    <th>Empresa</th>
+                                    <th>Email</th>
+                                    <th>Documento</th>
+                                    <th>Nº documento</th>
+                                    <th>Categoría</th>
+                                    <th>Tipo de acceso</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a><i class="fas fa-edit"></i></a></i>
+                                    </td>
+                                    <td><a><i class="fas fa-eraser"></i></a></i>
+                                    </td>
+                                    <td>1</td>
+                                    <td>Fernando José</td>
+                                    <td>González Menjivar</td>
+                                    <td>El Salvador</td>
+                                    <td>+503 75529611</td>
+                                    <td>ATS group</td>
+                                    <td>fernandomenjivar2011@gmail.com</td>
+                                    <td>DUI</td>
+                                    <td>12345678-9</td>
+                                    <td>Staff</td>
+                                    <td>Total</td>
+
+                                </tr>
+
+                                <tr>
+                                    <td><a><i class="fas fa-edit"></i></a></i>
+                                    </td>
+                                    <td><a><i class="fas fa-eraser"></i></a></i>
+                                    </td>
+                                    <td>2</td>
+                                    <td>Félix Iván</td>
+                                    <td>Melendéz Alfaro</td>
+                                    <td>Guatemala</td>
+                                    <td>+502 75529611</td>
+                                    <td>ATS group</td>
+                                    <td>felixmelendez2011@gmail.com</td>
+                                    <td>DUI</td>
+                                    <td>87654321-9</td>
+                                    <td>Expositor</td>
+                                    <td>Administrativo</td>
+
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <!--Fin usuarios activos-->
+                </div>
+
+                <!--Fin contenido principal-->
+            </div>
+        </div>
+
+    </div>
+    <!--Fin contenedor de pagina-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

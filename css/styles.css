@@ -1,0 +1,510 @@
+/*------------------------------------*    Estilos globales
+    -variabales (sass).
+    - *
+    - body
+    -ul
+    -a
+\*------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translate3d(0);
+          transform: translate3d(0);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  color: #3a3a3a;
+  height: 100%;
+  background: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(58, 58, 58, 0.1);
+}
+
+/*------------------------------------*    Clases de ayuda
+    - .hideThis
+    -  .active
+    - .add-user
+    -
+    -
+\*------------------------------------*/
+.hideThis {
+  display: none;
+}
+
+.add-user {
+  color: #a5a5a5;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  bottom: -16px;
+  z-index: 100;
+}
+
+/*------------------------------------*    Estilos header y navegacion movil
+    - .nav
+    - .head-txt
+    - .hamburger
+    - .content-menu
+    - .navigation
+    - .sesion
+    - .item-link
+\*------------------------------------*/
+.nav {
+  padding: 10px 5px;
+  width: 100%;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+}
+
+.nav .head-txt a {
+  font-family: 'Montserrat', sans-serif;
+  color: #3a3a3a;
+  padding: 10px 15px;
+  font-size: 1.5em;
+}
+
+.nav .hamburger {
+  width: auto;
+  height: auto;
+  outline: none;
+  padding: 10px 20px;
+  line-height: 1;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.contain-menu {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  display: none;
+  margin-left: auto;
+  z-index: 20;
+  position: absolute;
+}
+
+.navigation {
+  width: 100%;
+  background: #fbfbfc;
+}
+
+.contain-menu.active {
+  display: block;
+  height: 100%;
+}
+
+h4.sesion {
+  background-color: #fff;
+  padding: 20px 20px 5px 20px;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.2);
+}
+
+.item-link {
+  color: #3a3a3a;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  border-bottom: 1px solid rgba(165, 165, 165, 0.2);
+  text-transform: capitalize;
+  line-height: 26px;
+}
+
+.item-link:hover {
+  color: #cf005a;
+}
+
+.item-link.active {
+  color: #5f096c;
+}
+
+.item-link i {
+  padding-right: 10px;
+  vertical-align: center;
+  font-size: 16px;
+}
+
+/*------------------------------------*    Contenido principal - movil
+    - .main-content
+
+\*------------------------------------*/
+.main-content {
+  background: #E5E5E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  padding: 20px;
+  height: 100vh;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/**Ejemplos**/
+.cajon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  border-radius: 5px;
+  padding: 25%;
+  margin: 10px;
+  background-color: #ff6a00;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+.c1 {
+  background-color: #5f096c;
+}
+
+.desk-header {
+  display: none;
+}
+
+.aside {
+  display: none;
+}
+
+.logout {
+  display: none;
+}
+
+.head-user {
+  display: none;
+}
+
+/*------------------------------------*    Tablas (DataTable clases)
+    - .dataTables_wrapper
+    - .dataTables_Length
+    - .hdataTables_filter
+    - .dataTable
+    - .no-footer
+    - table
+    - th
+    - #DataTables_Table_0_info
+    - DataTables_Table_0_paginate
+    - .main-content
+    - item-link
+    
+\*------------------------------------*/
+.dataTables_wrapper {
+  padding: 5px;
+  padding-top: 30px;
+  border-radius: 10px;
+}
+
+.dataTables_wrapper .dataTables_length {
+  margin: 10px;
+  color: #a5a5a5;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  background: transparent;
+  border: none;
+  color: #a5a5a5;
+}
+
+.dataTables_wrapper .dataTables_scroll {
+  margin: 0;
+}
+
+.dataTables_wrapper .dataTables_scrollHead {
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dataTables_wrapper table#DataTables_Table_0 {
+  width: 100%;
+}
+
+.dataTables_wrapper .dataTables_filter {
+  margin: 10px;
+  color: #a5a5a5;
+}
+
+.dataTables_wrapper .dataTables_filter input[type=search] {
+  background: transparent;
+  border: none;
+  margin: 10px;
+  outline: none;
+  border-bottom: 1px solid #cf005a;
+}
+
+.dataTables_wrapper table.dataTable.no-footer {
+  border: none;
+}
+
+.dataTables_wrapper table.table.table4.dataTable.no-footer {
+  width: 100% !important;
+}
+
+.dataTables_wrapper .dataTables_scrollHeadInner {
+  width: 100%;
+}
+
+.dataTables_wrapper table#DataTables_Table_0 {
+  width: 100%;
+}
+
+.dataTables_wrapper .dataTables_scrollBody {
+  border: none !important;
+}
+
+.dataTables_wrapper table.dataTable thead th,
+.dataTables_wrapper table.dataTable thead td {
+  border: none;
+}
+
+.dataTables_wrapper table.dataTable thead th {
+  background: #cf005a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  vertical-align: middle;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 22px 20px;
+  white-space: nowrap;
+}
+
+.dataTables_wrapper .table2.dataTable thead th {
+  background: #5f096c;
+}
+
+.dataTables_wrapper .table3.dataTable thead th {
+  background: #031430;
+}
+
+.dataTables_wrapper .table4.dataTable thead th {
+  background: #0366D6;
+}
+
+.dataTables_wrapper .table5.dataTable thead th {
+  background: #94D82D;
+}
+
+.dataTables_wrapper div#DataTables_Table_0_info {
+  margin: 10px;
+  color: #a5a5a5;
+  text-align: left;
+}
+
+.dataTables_wrapper div#DataTables_Table_0_paginate {
+  position: relative;
+  right: 10%;
+}
+
+.dataTables_wrapper div#DataTables_Table_0_paginate a.paginate_button.current {
+  padding: 5px 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #cf005a;
+}
+
+/*------------------------------------*    Tablas 
+    - .table-container
+    - .table
+\*------------------------------------*/
+.table-container {
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+}
+
+table.table {
+  max-width: 100%;
+  margin: 0;
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.table tr:nth-of-type(odd) {
+  background: #fff;
+}
+
+.table tr:nth-of-type(even) {
+  background-color: #f5f5f5;
+}
+
+.table td {
+  color: #3a3a3a;
+  padding: 12px 20px;
+  white-space: nowrap;
+  border: 0;
+}
+
+table tbody tr td a {
+  font-size: 15px;
+  cursor: pointer;
+  color: #5f096c;
+}
+
+/*------------------------------------*    Estilos navegacion y header escritorio
+    - .main-container
+    - .desk-header
+    - .head-txt
+    - .logout
+    - .head-user
+    - .box
+    - .aside
+    - .navigation-desk
+    - .main-content
+    - item-link
+
+\*------------------------------------*/
+@media all and (min-width: 990px) {
+  .mobile-nav {
+    display: none;
+  }
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .desk-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    height: 75px;
+    min-height: 75px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+    box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+    z-index: 10;
+  }
+  .desk-header .head-txt a {
+    font-family: 'Montserrat', sans-serif;
+    color: #3a3a3a;
+    font-size: 1.8em;
+    padding: 0 20px;
+  }
+  .desk-header .logout {
+    display: block;
+    width: auto;
+    border: none;
+    padding: 0 20px;
+    line-height: 1;
+    font-size: 1em;
+  }
+  .desk-header .head-user {
+    display: inline;
+  }
+  .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    height: 100%;
+  }
+  .box .aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 300px;
+    min-width: 300px;
+  }
+  .box .aside .navigation-desk {
+    padding: 35px 35px 0px 35px;
+  }
+  .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+  }
+  .item-link {
+    border: none;
+    display: block;
+    font-size: 16px;
+    color: #3a3a3a;
+    padding: 15px 0;
+    line-height: 1.625;
+  }
+  .item-link.active {
+    color: #5f096c;
+  }
+  .add-user {
+    position: relative;
+    color: #a5a5a5;
+    top: 20px;
+    bottom: auto;
+    padding: 0 20px;
+    font-size: 15px;
+    z-index: 1000;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
