@@ -14,13 +14,14 @@
           transform: translate3d(0);
 }
 
+html,
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.625;
   color: #3a3a3a;
-  height: 100%;
+  background-color: #E5E5E5;
   background: #fff;
 }
 
@@ -50,7 +51,12 @@ a {
   text-align: center;
   position: relative;
   bottom: -16px;
-  z-index: 100;
+  z-index: 10;
+}
+
+h2.head-text.form {
+  text-align: left;
+  padding: 1em 0;
 }
 
 /*------------------------------------*    Estilos header y navegacion movil
@@ -69,6 +75,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #fff;
   position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -76,8 +83,8 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
-  box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+  box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
 }
 
 .nav .head-txt a {
@@ -174,6 +181,7 @@ h4.sesion {
           flex-flow: column nowrap;
   padding: 20px;
   height: 100vh;
+  min-height: 100%;
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -187,8 +195,8 @@ h4.sesion {
   padding: 25%;
   margin: 10px;
   background-color: #ff6a00;
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+  box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
 }
 
 .c1 {
@@ -352,8 +360,8 @@ h4.sesion {
   background-color: #fff;
   padding: 5px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+  box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
 }
 
 table.table {
@@ -384,6 +392,354 @@ table tbody tr td a {
   color: #5f096c;
 }
 
+td,
+th,
+td {
+  text-align: center;
+}
+
+/*------------------------------------*    Estilos de editar usuario
+    - .main-container
+    - .desk-header
+    - .head-txt
+    - .logout
+    - .head-user
+    - .box
+    - .aside
+    - .navigation-desk
+    - .main-content
+    - item-link
+
+\*------------------------------------*/
+.form-container {
+  padding: 1em 3em;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+  box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.sub-box1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  width: 100%;
+}
+
+.box3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.sub-box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.sub-box3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+}
+
+.file-r {
+  position: relative;
+}
+
+/*FIN ESTILOS FLEXBOX*/
+/*Estilos select*/
+.sel {
+  display: inline-block;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.sel::before {
+  position: absolute;
+  content: '\f078';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5em;
+  color: #a5a5a5;
+  right: 0px;
+  top: calc(50% - 0.5em);
+}
+
+.sel.active::before {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.sel__placeholder {
+  display: block;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #3a3a3a;
+  text-align: left;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  visibility: visible;
+}
+
+.sel.active .sel__placeholder {
+  visibility: hidden;
+}
+
+.sel__placeholder::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: attr(data-placeholder);
+  visibility: hidden;
+}
+
+.sel.active .sel__placeholder::before {
+  visibility: visible;
+}
+
+.sel__box {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: -4px;
+  display: none;
+  list-style-type: none;
+  text-align: left;
+  font-size: 15px;
+  background-color: #f4f5f7;
+  width: calc(100% + 8px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.sel.active .sel__box {
+  display: block;
+  -webkit-animation: fadeInUp 500ms;
+          animation: fadeInUp 500ms;
+}
+
+.sel__box__option {
+  display: list-item;
+  font-size: 15px;
+  color: #a5a5a5;
+  padding: 0.5em 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sel__box__option::after {
+  content: '\f00c';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+  margin-left: 5px;
+  display: none;
+}
+
+.sel__box__option.selected::after {
+  display: inline;
+}
+
+.sel__box__option:hover {
+  background-color: rgba(207, 0, 90, 0.3);
+  color: #fff;
+}
+
+.sel {
+  border-bottom: 1px solid #a5a5a5;
+}
+
+.sel {
+  padding: 5px;
+  margin: 10px;
+}
+
+.select1 {
+  z-index: 3;
+}
+
+.select2 {
+  z-index: 2;
+}
+
+.select3 {
+  z-index: 1;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+            transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/*Fin selects */
+/*INPUT estilos*/
+.input[type=text],
+.input[type=email],
+.input[type=tel] {
+  border: none;
+  border-bottom: 1px solid #a5a5a5;
+  outline: none;
+  color: #3a3a3a;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.input[type=submit] {
+  border: none;
+  width: 45%;
+  color: #fff;
+  background: #5f096c;
+  background: -webkit-gradient(linear, left top, right top, from(#5f096c), to(#cf005a));
+  background: linear-gradient(to right, #5f096c 0%, #cf005a 100%);
+  cursor: pointer;
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.label {
+  color: #a5a5a5;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.label,
+.input {
+  margin: 10px;
+  padding: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nb-spinner {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 10px;
+  background: transparent;
+  border-top: 4px solid #a5a5a5;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: 1s spin linear infinite;
+  animation: 1s spin linear infinite;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 /*------------------------------------*    Estilos navegacion y header escritorio
     - .main-container
     - .desk-header
@@ -408,6 +764,7 @@ table tbody tr td a {
     position: fixed;
     width: 100%;
     height: 100vh;
+    min-height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
@@ -423,14 +780,15 @@ table tbody tr td a {
             flex-flow: row nowrap;
     height: 75px;
     min-height: 75px;
+    background: #fff;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
-    box-shadow: 0px 3px 16px -4px rgba(0, 0, 0, 0.41);
+    -webkit-box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
+    box-shadow: 0px 0px 12px -1px rgba(58, 58, 58, 0.33);
     z-index: 10;
   }
   .desk-header .head-txt a {
@@ -469,6 +827,7 @@ table tbody tr td a {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     width: 300px;
+    background: #fff;
     min-width: 300px;
   }
   .box .aside .navigation-desk {
@@ -505,6 +864,16 @@ table tbody tr td a {
     padding: 0 20px;
     font-size: 15px;
     z-index: 1000;
+  }
+  .form-container {
+    padding: 1em 8em;
+  }
+  .input[type=submit] {
+    width: 20%;
+  }
+  h2.head-text.form {
+    text-align: center;
+    padding: 1em 3em 3em 3em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
