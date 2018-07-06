@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Poppins:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/0.9.3/hamburgers.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Administración - Consuma 2018</title>
+</head>
+
+<body>
+    <!--Contenedor de pagina-->
+    <div class="main-container">
+
+        <!--Menu y navegacion movil-->
+        <header class="mobile-nav">
+            <div class="nav">
+                <button class="hamburger hamburger--collapse" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+
+                <h3 class="head-txt"> <a href="#">Consuma 2018</a></h3>
+            </div>
+
+
+            <div class="contain-menu">
+                <ul class="navigation">
+                    <li class="iten-mobile">
+                        <a class="item-link active" href="index.html">
+                            <i class="fas fa-tachometer-alt"></i>Inicio</a>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="usuarios-activos.html">
+                                <i class="fas fa-user-check"></i>Usuarios activos</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="usuarios-inactivos.html">
+                                <i class="fas fa-user-alt-slash"></i>Usuarios inactivos</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="todos-los-usuarios.html">
+                                <i class="fas fa-users"></i>Todos los usuarios</a>
+                        </li>
+
+                        <li class="iten-mobile">
+                            <a class="item-link" href="carnet-impresos.html">
+                                <i class="fas fa-address-card"></i>Carnet impresos</a>
+                        </li>
+                        <li class="iten-mobile">
+                            <a class="item-link" href="administradores.html">
+                                <i class="fas fa-user-cog"></i>Administradores</a>
+                        </li>
+                        <h4 class="sesion">Sesión</h4>
+                        <li class="iten-mobile">
+                            <a class="item-link" href="">
+                                <i class="fas fa-sign-out-alt"></i>Cerrar sesión</a>
+                        </li>
+                </ul>
+            </div>
+            <!--Fin menu y navegacion movil-->
+        </header>
+
+        <!--Menu y navegacion de escritorio-->
+        <div class="desk-header">
+            <h3 class="head-txt">
+                <a href="">Consuma 2018</a>
+            </h3>
+            <p class="head-user">Bienvenido <span class="user-data head-user"> Usuario</span></p>
+
+            <a href="" class="logout item-link"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+        </div>
+
+        <div class="box">
+            <aside class="aside">
+                <div class="contain-menu-desk">
+                    <ul class="navigation-desk">
+                        <li class="item-desk">
+                            <a class="item-link" href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>Inicio</a>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="usuarios-activos.html">
+                                    <i class="fas fa-user-check"></i>Usuarios activos</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="usuarios-inactivos.html">
+                                    <i class="fas fa-user-alt-slash"></i>Usuarios inactivos</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="todos-los-usuarios.html">
+                                    <i class="fas fa-users"></i>Todos los usuarios</a>
+                            </li>
+
+                            <li class="item-desk">
+                                <a class="item-link" href="carnet-impresos.html">
+                                    <i class="fas fa-address-card"></i>Carnet impresos</a>
+                            </li>
+                            <li class="item-desk">
+                                <a class="item-link" href="administradores.html">
+                                    <i class="fas fa-user-cog"></i>Administradores</a>
+                            </li>
+                    </ul>
+                </div>
+                <!--Fin menu y navegacion de escritorio-->
+            </aside>
+
+            <!--Contenido principal-->
+            <div class="main-content">
+
+                <div class="form-container">
+                    <h2 class="head-text form">Modificar usuario</h2>
+                    <div class="second-half">
+
+                        <form action="destino.php" method="POST" class="form" id="form">
+
+                            <div class="box2">
+                                <div class="sub-box1">
+                                    <label for="nombre" class="label">Nombres</label>
+                                    <span class="error_form" id="fname_error_message"></span>
+                                    <input type="text" name="nombre" class="input" id="form_fname">
+                                </div>
+                                <div class="sub-box1">
+                                    <label for="apellido" class="label">Apellidos</label>
+                                    <span class="error_form" id="flname_error_message"></span>
+                                    <input type="text" name="apellido" class="input" id="form_flname">
+                                </div>
+
+                            </div>
+                            <!--.box2-->
+
+                            <div class="box2">
+                                <div class="sub-box1">
+                                    <label for="pais" class="label">País</label>
+                                    <span class="error_form" id="fcountry_error_message"></span>
+                                    <div class="sel select1 pais" id="pais">
+                                        <select name="pais" class="select pais" id="form_fcountry">
+                                                    <option value="" class="opcion">Seleccionar</option>
+                                                    <option value="1" class="opcion">El Salvador</option>
+                                                    <option value="2" class="opcion">Guatemala</option>
+                                                    <option value="3" class="opcion">Nicaragua</option>
+                                                    <option value="4" class="opcion">Honduras</option>
+                                                    <option value="5" class="opcion">Costa Rica</option>
+                                                    <option value="6" class="opcion">Panama</option>
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="sub-box1">
+                                    <label for="celular" class="label">Celular</label>
+                                    <span class="error_form" id="ftel_error_message"></span>
+                                    <input type="tel" name="celular" class="input" id="form_ftel">
+                                </div>
+                            </div>
+                            <!--box2-->
+
+                            <div class="box3">
+                                <div class="sub-box2">
+                                    <label for="empresa" class="label">Empresa</label>
+                                    <span class="error_form" id="fcompany_error_message"></span>
+                                    <input type="text" name="empresa" class="input" id="form_fcompany">
+                                </div>
+                                <div class="sub-box2">
+                                    <label for="correo" class="label">Correo electrónico</label>
+                                    <span class="error_form" id="femail_error_message"></span>
+                                    <input type="email" name="email" class="input" id="form_femail">
+                                </div>
+                            </div>
+                            <!--box3-->
+
+                            <div class="box2">
+                                <div class="sub-box1">
+                                    <label for="documento" class="label">Documento</label>
+                                    <span class="error_form" id="fdocument_error_message"></span>
+                                    <div class="sel select1 documento">
+                                        <select class="select document" name="documento" id="form_fdocument">
+                                                  <option value="" class="opcion">Seleccionar</option>
+                                                  <option value="1" class="opcion">DUI</option>
+                                                  <option value="2" class="opcion">Pasaporte</option>
+                                                  <option value="3" class="opcion">NIT/Licencia</option>
+                                                </select>
+                                    </div>
+                                </div>
+                                <div class="sub-box1">
+                                    <label for="numero-documento" class="label">Número de Documento</label>
+                                    <span class="error_form" id="fndocument_error_message"></span>
+                                    <input type="text" name="numero-documento" class="input" id="form_fndocument">
+                                </div>
+
+                            </div>
+                            <!--box2-->
+
+                            <div class="box2" id="admin">
+                                <div class="sub-box1">
+                                    <label for="categoria" class="label">Categoría</label>
+                                    <span class="error_form" id="fcategory_error_message"></span>
+                                    <div class="sel select2">
+                                        <select name="categoria" class="select" id="form_fcategory">
+                                                  <option value="" class="opcion" disabled>Seleccionar</option>
+                                                <option value="1" class="opcion">Expositor</option>
+                                                <option value="2" class="opcion">Proveedor</option>
+                                                <option value="3" class="opcion">Staff</option>
+                                              </select>
+                                    </div>
+                                </div>
+                                <!--box2-->
+
+                                <div class="sub-box1">
+
+                                    <label for="tipo-acceso" class="label">Tipo de acceso</label>
+                                    <span class="error_form" id="facces_error_message"></span>
+
+                                    <div class="sel select3">
+                                        <select name="tipo-acceso" class="select" id="form_facces">
+                                                  <option value="" class="opcion" disabled>Seleccionar</option>
+                                                <option value="1" class="opcion">Total</option>
+                                                <option value="2" class="opcion">Administrativo</option>
+                                                <option value="3" class="opcion">Operativo</option>
+                                                <option value="4" class="opcion">Apoyo</option>
+                                              </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--.box5-->
+
+                            <div class="sub-box3">
+                                <input type="submit" value="Modificar" class="input">
+                                <div class="nb-spinner hideThis"></div>
+                            </div>
+                            <!--box6-->
+
+
+
+                        </form>
+                        <!--Fin contenido principal-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!--Fin contenedor de pagina-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+</body>
+
+</html>
